@@ -1,0 +1,53 @@
+  /************************************
+                  CONTACT
+  ************************************/
+  
+  #contact {
+    background-color:  rgba(0, 0, 0, 0.7);
+    display: grid;
+    grid-template: auto 100px / 700px;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+  }
+  
+  #contact form {
+    padding: 20px;
+    color: white;
+    display: grid;
+    gap: 15px;
+    grid-template: auto / auto;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  #contact form input,
+  #contact form textarea {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+  }
+  #contact .social-networks {
+    justify-self: center;
+    padding: 10px 0;
+  }
+  
+  #contact form input[type="submit"] {
+    background-color: #46a2fd;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  
+  #contact .social-networks a {
+    color: white;
+  }
+  
+@media (max-width: 800px) {
+    #contact {
+        padding: 0 20px;
+        grid-template:auto 100px / 100% ;
+    }
+}
