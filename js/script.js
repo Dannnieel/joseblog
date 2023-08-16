@@ -101,6 +101,7 @@ listItem1.addEventListener("click", () => {
  });
 
  function makeActive(element) {
+
     const menuItems = document.querySelectorAll('.menu li');
     menuItems.forEach(item => {
         item.classList.remove('active');
@@ -108,3 +109,37 @@ listItem1.addEventListener("click", () => {
     element.classList.add('active');
 
 }
+
+
+
+ document.addEventListener("scroll", function() { 
+
+    const VALUE = 150;
+    const sections = document.querySelectorAll('.section');
+
+    const items = document.querySelectorAll(".menu ul li");
+    for (const section of sections) {
+        const box = section.getBoundingClientRect();
+        
+        if (box.top <= VALUE && box.bottom >= VALUE) {
+            console.log(section.id);
+            switch (section.id){
+                case "contact":
+                    makeActive(items[1]);
+                    break;
+                case "about":
+                    makeActive(items[0]);
+                    break;
+                case "section2":
+                    makeActive(items[3]);
+                    break;
+                case "section1":
+                    makeActive(items[2]);
+                    break;
+                
+            }
+        }   
+    }
+
+ });
+

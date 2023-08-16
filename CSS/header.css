@@ -37,3 +37,7 @@ header{
     color: #46a2fd;
 
 }
+
+.active {
+    color: #46a2fd !important;
+}
